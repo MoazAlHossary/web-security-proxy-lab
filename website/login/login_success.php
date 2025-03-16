@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <nav>
             <ul>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="/final/index.html">Logout</a></li>
+                <li><a href="/website/index.html">Logout</a></li>
             </ul>
         </nav>
     </header>
