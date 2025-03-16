@@ -1,0 +1,73 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #1a1a1a, #333333);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(135deg, #1a1a1a, #292929, #3d3d3d);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 400px; 
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #D4AF37;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+input {
+    padding: 14px;
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background: 3E4A56;
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #b58e0e, #f1c40f);
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #A88F32, #8B6F47);
+}
+
+.back-home {
+    display: block;
+    margin-top: 20px;
+    color: #D4AF37;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}
