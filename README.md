@@ -131,7 +131,29 @@ Figure 18: Flags are set
 <img width="1201" alt="image" src="https://github.com/user-attachments/assets/ae7abca7-818e-4fc7-a969-f8d21c2172b3" />
 Figure 19: making new request to check if cookie is present
 
+## b. Try to set the Expiration date of the cookie to an older date than the current date.
+<img width="1276" alt="image" src="https://github.com/user-attachments/assets/0fe29623-541f-4960-ad23-741800b05743" />
+Figure 20: Add outdated cookie
+
+![image](https://github.com/user-attachments/assets/c5c4ebf0-66c1-4437-b43d-a1ed62ed6d2c)
+Figure 21: Outdated cookie gets deleted
+
+#Fiddler
+![image](https://github.com/user-attachments/assets/1349c81d-1844-4acd-b697-107e3f76c202)
+
+![image](https://github.com/user-attachments/assets/c564d48b-1c02-4619-a7d2-e9cff19ac83b)
+
+![image](https://github.com/user-attachments/assets/10f1d23a-be95-4d90-9114-392e2fadb820)
+
+![image](https://github.com/user-attachments/assets/1067fa71-9ed0-414d-ba1b-83cd698ff412)
 
 
+https
 
+![image](https://github.com/user-attachments/assets/81a8498b-86ae-445d-a1b4-ad36a7df1488)
 
+![image](https://github.com/user-attachments/assets/2cca9c37-e31a-4d8e-aca8-629c44d9a9c4)
+
+![image](https://github.com/user-attachments/assets/5619a334-26cd-4e1d-9c8b-3ed3532b2d13)
+
+![image](https://github.com/user-attachments/assets/c7a630d9-607b-4ca5-ad5a-30dfa2171847)
