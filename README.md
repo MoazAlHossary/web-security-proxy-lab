@@ -38,8 +38,10 @@ The aim of this project is to get hands-on experience with TLS termination proxy
 - OWASP ZAP
 - Fiddler
 
-- ## Steps
- # a) Try to change the hostname to www.google.com.
+
+- ## Steps <br>
+#Burp Suite<br>
+ ## a) Try to change the hostname to www.google.com.
 <img width="932" alt="fig4" src="https://github.com/user-attachments/assets/6dcd1168-72eb-4115-881b-d06af6a2e169" />    
 <br> Figure 1: Changing Hostname in Burp Suite in the intercept tab. <br>
 
@@ -60,7 +62,7 @@ To effectively redirect the request to Google’s web server, we changed the tar
 <br> Figure 4: 404 Not Found <br>
 The response of our modified request returned a 404 Not Found Error, this is because our website is in a local directory and Google’s server does not recognize our /final directory since it's there. Therefore resulting in a 404 Not Found error.
 
-# B) Try GET requests with additional nonstandard headers and different HTTP versions. Why do some attackers prefer to use HTTP/1.0?
+## B) Try GET requests with additional nonstandard headers and different HTTP versions. Why do some attackers prefer to use HTTP/1.0?
 
 <img width="1280" alt="fig5" src="https://github.com/user-attachments/assets/3fa6e244-b6f3-42b8-a663-4f4cc4159813" />
 
@@ -82,7 +84,7 @@ Figure 6: Add an extra header using HTTP/1.0 <br>
 Figure 7: Request sent successfully <br>
 In the screenshot above we can see our modified header with an additional custom header was accepted since we changed the HTTP version from HTTP/1.1 to HTTP/1.0. The server responded with a 200 OK meaning the request was successful, meaning the website accepts HTTP/1.0 making it prone to many attacks such as downgrade attack and header injection.
 
-# c) When requesting the form page, try a GET request, but change the POST to GET using a proxy
+## c) When requesting the form page, try a GET request, but change the POST to GET using a proxy
 
 <img width="1280" alt="fig7" src="https://github.com/user-attachments/assets/0e17b13a-4444-4cca-a435-06838a225aae" />
 Figure 8: Sign in using post <br>
@@ -93,9 +95,41 @@ The screenshot above demonstrates a login attempt using the POST method from our
 <img width="409" alt="fig8" src="https://github.com/user-attachments/assets/8031f096-5c42-4c9b-9478-bbc3a7f22592" /><br>
 Figure 9: Right click request and click change method <br>
 
-<img width="1280" alt="fig9" src="https://github.com/user-attachments/assets/27619bef-6011-407f-971c-45fd37d88a01" />
+<img width="1280" alt="fig9" src="https://github.com/user-attachments/assets/27619bef-6011-407f-971c-45fd37d88a01" /><br>
 Figure 10: Send and analyze response <br>
 We changed the method from POST to GET using the “Change Request Method” option in Burp Suite, and we can see a response of 200 OK meaning our modified request was accepted. Moreover this affected our website by redirecting us to the post login page mentioning that we logged in using GET and not POST, which ensures we succesfully manipulated the Request.
+
+# ZAP
+
+## a. Try to control the usage of this Cookie by intercepting the request and adding additional headers such as HTTPOnly, Secure, Expiration Date, and Path.
+![image](https://github.com/user-attachments/assets/6d5dd245-85c2-43f3-bf2c-8a4c40ebe05a)<br>
+Figure 11: Configuring zap
+Go to Network>Local server Proxies, then set the address to localhost and the port to 8080
+
+<img width="965" alt="image" src="https://github.com/user-attachments/assets/11887eb0-d7bb-4766-8126-e6f295ae782e" />
+Figure 12: enable HUD 
+
+![image](https://github.com/user-attachments/assets/9b7386ae-3298-499f-8c18-fe51a8d9bd69)
+Figure 13 Refresh to enable HUD mode
+
+<img width="1286" alt="image" src="https://github.com/user-attachments/assets/a308261e-5b02-447d-b89d-569244aadee8" />
+Figuree 14:
+
+<img width="1277" alt="image" src="https://github.com/user-attachments/assets/31fe0c12-da52-4205-902b-76747a41515f" />
+Figuree 15: Refresh page to get response and add cookie in response tab
+
+<img width="1277" alt="image" src="https://github.com/user-attachments/assets/5a495760-3ff5-4dd6-8490-ea461bb9a0ba" />
+Figuree 16: F12 + storage, you will find the cookie added
+
+Lets delete that cookie and try to add another but with httponly, secure flags and same site.
+<img width="1277" alt="image" src="https://github.com/user-attachments/assets/c99f2fa9-f6f9-4a94-a5e5-0123e97ac11d" />
+Figure 17: Add another cookie but with flags
+
+<img width="1275" alt="image" src="https://github.com/user-attachments/assets/a9f6cfbb-a640-4f11-ab34-65d59f67db7e" />
+Figure 18: Flags are set
+
+<img width="1201" alt="image" src="https://github.com/user-attachments/assets/ae7abca7-818e-4fc7-a969-f8d21c2172b3" />
+Figure 19: making new request to check if cookie is present
 
 
 
